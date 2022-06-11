@@ -22,15 +22,15 @@ namespace FrustratedNoel
         //污染版本
         [HarmonyPrefix]
         [HarmonyPatch(typeof(NelNGolem), "readTicketOd")]
-        public static bool DisableGolemThrowPawnAfterDeathOd(ref NaTicket Tk, ref PR pr)
+        public static bool DisableGolemThrowPawnAfterDeathOd(NelNGolem __instance ref NaTicket Tk)
         {
-            Debug.Log("Called readTicketOd, prefix detected.");
-            Debug.Log(string.Format("readTicketOd({0})",Tk));
-            if(!pr.is_alive)
+
+            PR pr = __instance.AimPr as PR;
+            if (!pr.is_alive)
             {
                 if (Tk.type == NAI.TYPE.PUNCH_2)
                 {
-                    Tk.type = NAI.TYPE.PUNCH_1;
+                    Tk = Tk.Recreate(NAI.TYPE.PUNCH_1,-1,false);
                 }
             }
             return true;
