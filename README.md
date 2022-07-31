@@ -1,6 +1,6 @@
 # 疲惫的诺艾尔
 
-#### [English](https://github.com/Holit/FrustratedNoel/docs/README_en.md)/[日本語](https://github.com/Holit/FrustratedNoel/docs/README_jp.md)
+#### [English](https://github.com/Holit/blob/FrustratedNoel/docs/README_en.md)/[日本語](https://github.com/Holit/FrustratedNoel/blob/master/docs/README_jp.md)
 
 > 也被称为厨圣版本
 
